@@ -1,0 +1,12 @@
+{
+  "name": "aws-credits-tracker",
+  "version": "1.0.0",
+  "description": "Chrome extension: AWS credit usage per day/week/month, credits left, and EC2 launch-page price badges.",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "build": "bash scripts/build.sh"
+  },
+  "engines": { "node": ">=20" }
+}

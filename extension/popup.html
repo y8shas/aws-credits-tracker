@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>AWS Credits Tracker</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <div class="title">AWS Credits</div>
+    <div class="actions">
+      <button id="refresh" title="Refresh now (2 Cost Explorer calls ≈ $0.02)">⟳</button>
+      <button id="gear" title="Settings">⚙</button>
+    </div>
+  </header>
+
+  <div id="msg" class="msg hidden"></div>
+
+  <main id="dash" class="hidden">
+    <section class="hero">
+      <div class="label">Credits left</div>
+      <div class="big" id="left">—</div>
+      <div class="bar"><div id="barfill"></div></div>
+      <div class="sub" id="leftsub"></div>
+    </section>
+
+    <section class="grid">
+      <div class="card"><span>Today</span><b id="d1">—</b></div>
+      <div class="card"><span>Yesterday</span><b id="d2">—</b></div>
+      <div class="card"><span>Last 7 days</span><b id="w">—</b></div>
+      <div class="card"><span>This month</span><b id="m">—</b></div>
+      <div class="card"><span>Last 30 days</span><b id="m30">—</b></div>
+      <div class="card"><span>Used overall</span><b id="tot">—</b></div>
+    </section>
+
+    <section id="proj" class="proj"></section>
+
+    <section>
+      <h3>Last 14 days</h3>
+      <div id="chart" class="chart"></div>
+    </section>
+
+    <section>
+      <h3>Top services this month</h3>
+      <div id="svc"></div>
+    </section>
+
+    <div class="foot" id="foot"></div>
+  </main>
+
+  <main id="settings" class="hidden">
+    <details id="guide" open>
+      <summary>First-time setup (2 minutes)</summary>
+      <ol>
+        <li>In AWS IAM, create a user and attach this policy:
+          <pre id="policy"></pre>
+          <button id="copypolicy" class="small">Copy policy</button>
+        </li>
+        <li>As the account owner: Billing → Account → enable <b>“IAM user and role access to Billing information”</b>.</li>
+        <li>Make sure Cost Explorer is enabled (open it once in the console; first data can take up to 24 h).</li>
+        <li>Create an access key for the IAM user and paste it below.</li>
+      </ol>
+    </details>
+
+    <h3>AWS access</h3>
+    <label>Access key ID<input id="ak" autocomplete="off" spellcheck="false"></label>
+    <label>Secret access key<input id="sk" type="password" autocomplete="off" spellcheck="false"></label>
+    <label>Session token <small>(only for temporary ASIA… keys)</small><input id="st" type="password" autocomplete="off" spellcheck="false"></label>
+    <label class="check"><input id="remember" type="checkbox"> Remember keys on this device <small>(otherwise they are forgotten when Chrome closes)</small></label>
+
+    <h3>Your credits</h3>
+    <label>Total credits you received ($)<input id="total" type="number" min="0" step="0.01" placeholder="e.g. 200"></label>
+    <label>Credits start date<input id="start" type="date"></label>
+    <label>Credits expiry date<input id="expiry" type="date"></label>
+
+    <h3>Options</h3>
+    <label>Cache dashboard data for (minutes)<input id="ttl" type="number" min="5" max="1440" value="60"></label>
+    <label>OS for EC2 launch-page prices
+      <select id="os"><option>Linux</option><option>Windows</option><option>RHEL</option><option>SUSE</option></select>
+    </label>
+    <label>Hours per month for the “/mo” price<input id="hours" type="number" min="1" max="744" value="730"></label>
+
+    <button id="save" class="primary">Save &amp; load</button>
+    <button id="wipe" class="danger">Remove keys &amp; all stored data</button>
+    <p class="hint">Keys are only ever sent to AWS (Cost Explorer and Price List APIs). No analytics, no other servers.</p>
+  </main>
+
+  <script src="sigv4.js"></script>
+  <script src="calc.js"></script>
+  <script src="store.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
