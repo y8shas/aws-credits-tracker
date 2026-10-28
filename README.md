@@ -95,7 +95,7 @@ Click the extension icon → ⚙ and fill in:
 | OS for prices | Linux (default), Windows, RHEL or SUSE — used for EC2 badges |
 | Hours per month | Used for the "/mo" price (default 730 = 24×365/12) |
 
-Click **Save & load**.
+Click **Save & load**
 
 ## Using it
 
