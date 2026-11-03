@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+  <title id="title">AWS Credits Tracker dashboard preview</title>
+  <desc id="desc">Illustrative dark dashboard showing remaining credits, spend summaries, burn-rate projection, a 14-day usage chart, and top services.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#10141b"/><stop offset="1" stop-color="#171c25"/></linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ff9900"/><stop offset="1" stop-color="#ffc15a"/></linearGradient>
+    <style>
+      text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#edf1f7}
+      .muted{fill:#8993a3}.tiny{font-size:13px}.small{font-size:15px}.label{font-size:14px;letter-spacing:.04em}.value{font-size:23px;font-weight:700}.card{fill:#1b212b;stroke:#2b3340;stroke-width:1}.line{stroke:#303846;stroke-width:1}
+    </style>
+  </defs>
+  <rect width="1200" height="620" rx="24" fill="url(#bg)"/>
+  <rect x="1" y="1" width="1198" height="618" rx="23" fill="none" stroke="#2b3340"/>
+  <rect x="0" y="0" width="1200" height="70" rx="24" fill="#141922"/>
+  <path d="M0 70h1200" class="line"/>
+  <text x="38" y="44" font-size="23" font-weight="700" fill="#ffad32">AWS Credits</text>
+  <text x="1060" y="43" class="muted small">⟳　⚙</text>
+  <rect x="30" y="92" width="1140" height="150" rx="16" class="card"/>
+  <text x="58" y="126" class="muted label">CREDITS LEFT</text>
+  <text x="58" y="184" font-size="48" font-weight="750">$142.68</text>
+  <rect x="58" y="204" width="1080" height="9" rx="5" fill="#303846"/>
+  <rect x="58" y="204" width="770" height="9" rx="5" fill="url(#accent)"/>
+  <text x="58" y="232" class="muted tiny">71% of $200.00 remaining</text>
+  <g>
+    <rect x="30" y="260" width="180" height="84" rx="12" class="card"/><text x="48" y="289" class="muted tiny">TODAY</text><text x="48" y="322" class="value">$1.42</text>
+    <rect x="222" y="260" width="180" height="84" rx="12" class="card"/><text x="240" y="289" class="muted tiny">YESTERDAY</text><text x="240" y="322" class="value">$2.18</text>
+    <rect x="414" y="260" width="180" height="84" rx="12" class="card"/><text x="432" y="289" class="muted tiny">LAST 7 DAYS</text><text x="432" y="322" class="value">$12.76</text>
+    <rect x="606" y="260" width="180" height="84" rx="12" class="card"/><text x="624" y="289" class="muted tiny">THIS MONTH</text><text x="624" y="322" class="value">$18.34</text>
+    <rect x="798" y="260" width="180" height="84" rx="12" class="card"/><text x="816" y="289" class="muted tiny">LAST 30 DAYS</text><text x="816" y="322" class="value">$54.20</text>
+    <rect x="990" y="260" width="180" height="84" rx="12" class="card"/><text x="1008" y="289" class="muted tiny">USED OVERALL</text><text x="1008" y="322" class="value">$57.32</text>
+  </g>
+  <rect x="30" y="360" width="1140" height="78" rx="12" class="card"/>
+  <text x="52" y="391" class="small">Burn rate: <tspan font-weight="700">$1.83/day</tspan> (7-day average) · <tspan font-weight="700">$54.90/month</tspan></text>
+  <text x="52" y="418" class="muted small">At this rate, credits last about 78 days · Expiry budget: $2.10/day</text>
+  <rect x="30" y="454" width="700" height="138" rx="12" class="card"/>
+  <text x="52" y="483" class="muted label">LAST 14 DAYS</text>
+  <path d="M58 565h640" class="line"/>
+  <g fill="#ff9900" opacity=".92">
+    <rect x="66" y="540" width="24" height="25" rx="3"/><rect x="110" y="522" width="24" height="43" rx="3"/><rect x="154" y="534" width="24" height="31" rx="3"/><rect x="198" y="506" width="24" height="59" rx="3"/><rect x="242" y="530" width="24" height="35" rx="3"/><rect x="286" y="517" width="24" height="48" rx="3"/><rect x="330" y="544" width="24" height="21" rx="3"/><rect x="374" y="512" width="24" height="53" rx="3"/><rect x="418" y="526" width="24" height="39" rx="3"/><rect x="462" y="500" width="24" height="65" rx="3"/><rect x="506" y="536" width="24" height="29" rx="3"/><rect x="550" y="517" width="24" height="48" rx="3"/><rect x="594" y="531" width="24" height="34" rx="3"/><rect x="638" y="520" width="24" height="45" rx="3"/>
+  </g>
+  <rect x="750" y="454" width="420" height="138" rx="12" class="card"/>
+  <text x="774" y="483" class="muted label">TOP SERVICES THIS MONTH</text>
+  <text x="774" y="516" class="small">Amazon Elastic Compute Cloud</text><text x="1129" y="516" text-anchor="end" class="small" font-weight="700">$12.64</text>
+  <path d="M774 528h370" class="line"/>
+  <text x="774" y="553" class="small">Amazon Simple Storage Service</text><text x="1129" y="553" text-anchor="end" class="small" font-weight="700">$3.18</text>
+  <text x="774" y="579" class="muted tiny">Illustrative example — values are sample data</text>
+</svg>
