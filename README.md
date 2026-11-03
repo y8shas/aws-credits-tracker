@@ -9,13 +9,10 @@ A Chrome extension that shows how quickly your AWS credits are being consumed an
 > Not affiliated with or endorsed by Amazon Web Services. "AWS" and "Amazon EC2" are trademarks of Amazon.com, Inc.
 
 <div align="center">
-  <img alt="AWS Credits Tracker dashboard preview" src="https://via.placeholder.com/1200x500?text=Dashboard+Preview" />
+  <img alt="Illustrative AWS Credits Tracker dashboard preview with sample data" src="docs/dashboard-preview.svg" width="900" />
+  <br />
+  <sub>Illustrative dashboard preview — values shown are sample data.</sub>
 </div>
-
-<!-- Add screenshots to docs/ and uncomment:
-![Dashboard](docs/dashboard.png)
-![EC2 launch page](docs/ec2-badges.png)
--->
 
 ---
 
